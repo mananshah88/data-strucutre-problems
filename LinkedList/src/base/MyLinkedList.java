@@ -17,7 +17,7 @@ public class MyLinkedList {
 		return "LinkedList [head=" + head + "]";
 	}
 
-	/* This method print the linked list */
+	/* This method prints the linked list */
 	public void printList() {
 		System.out.println("===================");
 		if (head == null) {
@@ -25,7 +25,7 @@ public class MyLinkedList {
 			return;
 		}
 		System.out.println("Head::" + head.data);
-		
+
 		Node node = head;
 		while (node.next != null) {
 			node = node.next;
@@ -35,16 +35,23 @@ public class MyLinkedList {
 
 	/* This method appends a node at the end of the linked list */
 	public void append(int data) {
-		Node node = new Node(data);
+		var node = new Node(data);
 		if (head == null) {
 			head = node;
 			return;
 		}
 		Node temp = head;
-		while(temp!=null && temp.next!=null) {
+		while (temp.next != null) {
 			temp = temp.next;
 		}
 		temp.next = node;
+	}
+
+	/* This method appends a node at the front of the linked list */
+	public void push(int data) {
+		var node = new Node(data);
+		node.next = head;
+		head=node;
 	}
 
 }
