@@ -19,7 +19,6 @@ public class MyLinkedList {
 
 	/* This method prints the linked list */
 	public void printList() {
-		System.out.println("===================");
 		if (head == null) {
 			System.out.println("Empty Linkedlist");
 			return;
@@ -31,6 +30,7 @@ public class MyLinkedList {
 			node = node.next;
 			System.out.println(node.data);
 		}
+		System.out.println("===================");
 	}
 
 	/* This method appends a node at the end of the linked list */
@@ -51,7 +51,26 @@ public class MyLinkedList {
 	public void push(int data) {
 		var node = new Node(data);
 		node.next = head;
-		head=node;
+		head = node;
 	}
 
+	/* This method appends a node after the given node */
+	public void insertAfter(Node node, int new_data) {
+		var new_node = new Node(new_data);
+		if (head == null) {
+			System.out.println("Empty Linkedlist");
+			return;
+		}
+		Node n = head;
+		while (n!=null && n.data != node.data) {
+			n = n.next;
+		}
+		if(n == null) {
+			System.out.println("Node not found");
+			System.out.println("===================");
+			return;
+		}
+		new_node.next = n.next;
+		n.next = new_node;
+	}
 }
