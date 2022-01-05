@@ -172,4 +172,14 @@ public class MyLinkedList {
 		}
 	}
 
+	/* This method finds the size of the the linked list */
+	public int size() {
+		var size = 0;
+		Node n = head;
+		while (n != null) {
+			n = n.next;
+			size++;
+		}
+		return size;
+	}
 }
