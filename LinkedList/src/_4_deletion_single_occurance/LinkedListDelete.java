@@ -2,7 +2,7 @@ package _4_deletion_single_occurance;
 
 import base.MyLinkedList;
 
-public class deletion {
+public class LinkedListDelete {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

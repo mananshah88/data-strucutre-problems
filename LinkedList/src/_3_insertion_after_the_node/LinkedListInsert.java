@@ -3,7 +3,7 @@ package _3_insertion_after_the_node;
 import base.MyLinkedList;
 import base.Node;
 
-public class Insertion {
+public class LinkedListInsert {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

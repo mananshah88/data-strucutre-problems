@@ -1,7 +1,7 @@
 package base;
 
 public class MyLinkedList {
-	Node head; // head of list
+	public Node head; // head of list
 
 	public MyLinkedList() {
 		super();
@@ -156,9 +156,20 @@ public class MyLinkedList {
 				i++;
 			}
 		}
-		if(!isFound) {
+		if (!isFound) {
 			System.out.println("Invalid position in Linkedlist!!");
 			System.out.println("===================");
 		}
 	}
+
+	/* This method deletes the linked list */
+	public void deleteLinkedList() {
+		if (head == null) {
+			System.out.println("Already empty Linkedlist");
+			System.out.println("===================");
+		} else {
+			head = null;
+		}
+	}
+
 }
