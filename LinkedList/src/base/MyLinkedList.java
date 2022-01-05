@@ -63,10 +63,10 @@ public class MyLinkedList {
 			return;
 		}
 		Node n = head;
-		while (n!=null && n.data != node.data) {
+		while (n != null && n.data != node.data) {
 			n = n.next;
 		}
-		if(n == null) {
+		if (n == null) {
 			System.out.println("Node " + new_data + " not found");
 			System.out.println("===================");
 			return;
@@ -75,7 +75,7 @@ public class MyLinkedList {
 		new_node.next = n.next;
 		n.next = new_node;
 	}
-	
+
 	/* This method deletes a given node/key */
 	public void deleteSingle(int data) {
 		if (head == null) {
@@ -99,8 +99,30 @@ public class MyLinkedList {
 			return;
 		}
 		curr_node.next = next_node.next;
-
 	}
-	
-	
+
+	/* This method deletes a given node/key for all the occurrences */
+	public void deleteMultiple(int data) {
+		if (head == null) {
+			System.out.println("Cannot delete!!! Empty Linkedlist");
+			System.out.println("===================");
+			return;
+		}
+		if (head.data == data) {
+			head = head.next;
+			return;
+		}
+		Node curr_node = head;
+		Node next_node = head.next;
+
+		while (next_node != null) {
+			if (next_node.data == data) {
+				curr_node.next = next_node.next;
+				next_node = next_node.next;
+			} else {
+				curr_node = next_node;
+				next_node = next_node.next;
+			}
+		}
+	}
 }
