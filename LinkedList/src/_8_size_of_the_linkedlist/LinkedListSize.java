@@ -14,11 +14,11 @@ public class LinkedListSize {
 		linkedList.append(30);
 		linkedList.printList();
 
-		System.out.println("Size of the linked list (without recursion) :: " + size(linkedList));
-		System.out.println("Size of the linked list    (with recursion) :: " + size(linkedList));
+		System.out.println("Size of the linked list (with Iterative) :: " + size_iterative(linkedList));
+		System.out.println("Size of the linked list (with recursion) :: " + size_recursion(linkedList));
 	}
 
-	public static int size(MyLinkedList linkedList) {
+	public static int size_iterative(MyLinkedList linkedList) {
 		if (linkedList == null || linkedList.head == null) {
 			return 0;
 		}
