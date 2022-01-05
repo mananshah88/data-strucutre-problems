@@ -125,4 +125,40 @@ public class MyLinkedList {
 			}
 		}
 	}
+
+	/*
+	 * This method deletes a given node/key for the specific position... Assumption:
+	 * Position starts from 0
+	 */
+	public void deleteAtPosition(int position) {
+		if (head == null) {
+			System.out.println("Cannot delete!!! Empty Linkedlist");
+			System.out.println("===================");
+			return;
+		}
+		if (position == 0) {
+			head = head.next;
+			return;
+		}
+		int i = 1;
+		boolean isFound = false;
+		Node curr_node = head;
+		Node next_node = head.next;
+		while (next_node != null) {
+			if (i == position) {
+				curr_node.next = next_node.next;
+				next_node = next_node.next;
+				isFound = true;
+				break;
+			} else {
+				curr_node = next_node;
+				next_node = next_node.next;
+				i++;
+			}
+		}
+		if(!isFound) {
+			System.out.println("Invalid position in Linkedlist!!");
+			System.out.println("===================");
+		}
+	}
 }
