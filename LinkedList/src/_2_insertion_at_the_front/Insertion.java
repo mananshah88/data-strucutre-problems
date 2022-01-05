@@ -1,7 +1,6 @@
-package _3_insertion;
+package _2_insertion_at_the_front;
 
 import base.MyLinkedList;
-import base.Node;
 
 public class Insertion {
 
@@ -11,14 +10,9 @@ public class Insertion {
 		linkedList.append(15);
 		linkedList.append(25);
 		linkedList.printList();
-		
-		linkedList.insertAfter(new Node(35), 100);
+		linkedList.push(3);
 		linkedList.printList();
-		
-		linkedList.insertAfter(new Node(5), 100);
-		linkedList.printList();
-		
-		linkedList.insertAfter(new Node(25), 200);
+		linkedList.push(1);
 		linkedList.printList();
 	}
 

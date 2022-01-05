@@ -1,4 +1,4 @@
-package _1_insertion;
+package _1_insertion_at_the_end;
 
 import base.MyLinkedList;
 
