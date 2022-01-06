@@ -1,4 +1,4 @@
-package _12_middle_index_linkedlist;
+package _14_length_linkedlist;
 
 import base.MyLinkedList;
 import base.Node;
@@ -13,30 +13,37 @@ public class LinkedListSize {
 		linkedList.append(20);
 		linkedList.append(25);
 		linkedList.append(30);
-		linkedList.append(35);
-		linkedList.printList();
 
-		Node node = middle_index(linkedList);
-		String middle = (node != null) ? "" + node.data : "Not possible";
-		System.out.println("Middle node :: " + middle);
+		linkedList.head.next.next.next.next.next.next = linkedList.head.next;
+
+		System.out.println("Is loop detected? :: " + length_linkedlist(linkedList));
 	}
 
-	public static Node middle_index(MyLinkedList linkedList) {
+	public static int length_linkedlist(MyLinkedList linkedList) {
 		if (linkedList == null || linkedList.head == null) {
-			return null;
+			return 0;
 		}
-
+		if (linkedList.head.next == null) {
+			return 1;
+		}
+		
 		Node fast_ptr = linkedList.head;
 		Node slow_ptr = linkedList.head;
-		while (fast_ptr != null) {
+
+		fast_ptr = fast_ptr.next.next;
+		slow_ptr = slow_ptr.next;
+		int length = 2;
+
+		while (fast_ptr != slow_ptr) {
 			fast_ptr = fast_ptr.next;
-			if(fast_ptr==null || fast_ptr.next==null) {
-				return slow_ptr;
+			if (fast_ptr == null || fast_ptr.next == null) {
+				break;
 			}
 			fast_ptr = fast_ptr.next;
 			slow_ptr = slow_ptr.next;
+			length++;
 		}
-		return slow_ptr;
+		return length;
 	}
 
 }
