@@ -3,7 +3,7 @@ package _9_search_element_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class SearchFromLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

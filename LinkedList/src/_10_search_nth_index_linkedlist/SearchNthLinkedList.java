@@ -3,7 +3,7 @@ package _10_search_nth_index_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class SearchNthLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

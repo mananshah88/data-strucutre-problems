@@ -2,7 +2,7 @@ package _7_delete_linkedlist;
 
 import base.MyLinkedList;
 
-public class LinkedListDelete {
+public class DeleteLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

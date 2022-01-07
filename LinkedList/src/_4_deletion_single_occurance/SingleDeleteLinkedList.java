@@ -1,9 +1,8 @@
-package _3_insertion_after_the_node;
+package _4_deletion_single_occurance;
 
 import base.MyLinkedList;
-import base.Node;
 
-public class LinkedListInsert {
+public class SingleDeleteLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
@@ -11,14 +10,20 @@ public class LinkedListInsert {
 		linkedList.append(15);
 		linkedList.append(25);
 		linkedList.printList();
-		
-		linkedList.insertAfter(new Node(35), 100);
+
+		linkedList.deleteSingle(50);
+		linkedList.printList();
+
+		linkedList.deleteSingle(15);
+		linkedList.printList();
+
+		linkedList.deleteSingle(25);
+		linkedList.printList();
+
+		linkedList.deleteSingle(5);
 		linkedList.printList();
 		
-		linkedList.insertAfter(new Node(5), 100);
-		linkedList.printList();
-		
-		linkedList.insertAfter(new Node(25), 200);
+		linkedList.deleteSingle(50);
 		linkedList.printList();
 	}
 

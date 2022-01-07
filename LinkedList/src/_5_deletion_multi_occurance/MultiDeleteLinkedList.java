@@ -2,7 +2,7 @@ package _5_deletion_multi_occurance;
 
 import base.MyLinkedList;
 
-public class LinkedListDelete {
+public class MultiDeleteLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

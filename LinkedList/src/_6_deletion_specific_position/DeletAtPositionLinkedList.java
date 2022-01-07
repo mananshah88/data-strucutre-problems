@@ -2,7 +2,7 @@ package _6_deletion_specific_position;
 
 import base.MyLinkedList;
 
-public class LinkedListDelete {
+public class DeletAtPositionLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

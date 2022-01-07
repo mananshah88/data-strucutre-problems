@@ -3,7 +3,7 @@ package _12_middle_index_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class MiddleOfLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

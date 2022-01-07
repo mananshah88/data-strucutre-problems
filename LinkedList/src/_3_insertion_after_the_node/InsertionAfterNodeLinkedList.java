@@ -1,8 +1,9 @@
-package _2_insertion_at_the_front;
+package _3_insertion_after_the_node;
 
 import base.MyLinkedList;
+import base.Node;
 
-public class LinkedListInsert {
+public class InsertionAfterNodeLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
@@ -10,9 +11,14 @@ public class LinkedListInsert {
 		linkedList.append(15);
 		linkedList.append(25);
 		linkedList.printList();
-		linkedList.push(3);
+		
+		linkedList.insertAfter(new Node(35), 100);
 		linkedList.printList();
-		linkedList.push(1);
+		
+		linkedList.insertAfter(new Node(5), 100);
+		linkedList.printList();
+		
+		linkedList.insertAfter(new Node(25), 200);
 		linkedList.printList();
 	}
 

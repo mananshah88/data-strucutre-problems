@@ -3,7 +3,7 @@ package _11_search_nth_index_last_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class SearchLastNthLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

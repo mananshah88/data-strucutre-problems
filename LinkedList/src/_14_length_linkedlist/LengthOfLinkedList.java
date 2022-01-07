@@ -3,7 +3,7 @@ package _14_length_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class LengthOfLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

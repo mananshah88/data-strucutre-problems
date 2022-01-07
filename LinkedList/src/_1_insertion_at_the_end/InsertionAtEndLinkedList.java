@@ -2,7 +2,7 @@ package _1_insertion_at_the_end;
 
 import base.MyLinkedList;
 
-public class LinkedListInsert {
+public class InsertionAtEndLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();

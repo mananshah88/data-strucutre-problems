@@ -3,7 +3,7 @@ package _13_detect_loop_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
-public class LinkedListSize {
+public class DetectLoopLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
