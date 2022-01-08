@@ -1,20 +1,20 @@
 package base;
 
-public class Node {
+public class Node <T> {
 
-	public int data;
+	public T data;
 	public Node next;
 
 	public Node() {
 
 	}
 
-	public Node(int data) {
+	public Node(T data) {
 		super();
 		this.data = data;
 	}
 
-	public Node(int data, Node next) {
+	public Node(T data, Node next) {
 		super();
 		this.data = data;
 		this.next = next;

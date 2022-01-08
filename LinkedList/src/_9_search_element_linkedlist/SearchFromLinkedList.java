@@ -3,42 +3,31 @@ package _9_search_element_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
+/* Search the element from the linked list */
 public class SearchFromLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
 		linkedList.append(5);
-		linkedList.append(15);
+		linkedList.append("A");
 		linkedList.append(20);
-		linkedList.append(25);
+		linkedList.append("B");
 		linkedList.printList();
 
-		int search_element = 5;
-		System.out.println("Search element :" + search_element + " (with Iterative) :: "
-				+ search_iterative(linkedList, search_element));
-		System.out.println("Search element :" + search_element + " (with recursion) :: "
-				+ search_recursion(linkedList, search_element));
+		System.out.println("Search element :" + 5 + " (with Iterative) :: " + search_iterative(linkedList, 5));
+		System.out.println("Search element :" + 5 + " (with recursion) :: " + search_recursion(linkedList, 5));
 
-		search_element = 15;
-		System.out.println("Search element :" + search_element + " (with Iterative) :: "
-				+ search_iterative(linkedList, search_element));
-		System.out.println("Search element :" + search_element + " (with recursion) :: "
-				+ search_recursion(linkedList, search_element));
+		System.out.println("Search element :" + "A" + " (with Iterative) :: " + search_iterative(linkedList, "A"));
+		System.out.println("Search element :" + "A" + " (with recursion) :: " + search_recursion(linkedList, "A"));
 
-		search_element = 25;
-		System.out.println("Search element :" + search_element + " (with Iterative) :: "
-				+ search_iterative(linkedList, search_element));
-		System.out.println("Search element :" + search_element + " (with recursion) :: "
-				+ search_recursion(linkedList, search_element));
+		System.out.println("Search element :" + "B" + " (with Iterative) :: " + search_iterative(linkedList, "B"));
+		System.out.println("Search element :" + "B" + " (with recursion) :: " + search_recursion(linkedList, "B"));
 
-		search_element = 35;
-		System.out.println("Search element :" + search_element + " (with Iterative) :: "
-				+ search_iterative(linkedList, search_element));
-		System.out.println("Search element :" + search_element + " (with recursion) :: "
-				+ search_recursion(linkedList, search_element));
+		System.out.println("Search element :" + 35 + " (with Iterative) :: " + search_iterative(linkedList, 35));
+		System.out.println("Search element :" + 35 + " (with recursion) :: " + search_recursion(linkedList, 35));
 	}
 
-	public static boolean search_iterative(MyLinkedList linkedList, int search_element) {
+	public static <T> boolean search_iterative(MyLinkedList linkedList, T search_element) {
 		if (linkedList == null || linkedList.head == null) {
 			return false;
 		}
@@ -51,14 +40,14 @@ public class SearchFromLinkedList {
 		return false;
 	}
 
-	public static boolean search_recursion(MyLinkedList linkedList, int search_element) {
+	public static <T> boolean search_recursion(MyLinkedList linkedList, T search_element) {
 		if (linkedList == null || linkedList.head == null) {
 			return false;
 		}
 		return search(linkedList.head, search_element);
 	}
 
-	public static boolean search(Node n, int search_element) {
+	public static <T> boolean search(Node n, T search_element) {
 		if (n != null) {
 			if (n.data == search_element) {
 				return true;

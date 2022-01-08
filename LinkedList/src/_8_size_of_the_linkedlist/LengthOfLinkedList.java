@@ -3,14 +3,15 @@ package _8_size_of_the_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
+/* Find the size of the linked list if it is not circular */
 public class LengthOfLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
 		linkedList.append(5);
-		linkedList.append(15);
+		linkedList.append("A");
 		linkedList.append(20);
-		linkedList.append(25);
+		linkedList.append("B");
 		linkedList.append(30);
 		linkedList.printList();
 

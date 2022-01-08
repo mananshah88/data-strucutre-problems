@@ -35,7 +35,7 @@ public class MyLinkedList {
 	}
 
 	/* This method appends a node/key at the end of the linked list */
-	public void append(int data) {
+	public <T>void append(T data) {
 		var node = new Node(data);
 		if (head == null) {
 			head = node;
@@ -49,7 +49,7 @@ public class MyLinkedList {
 	}
 
 	/* This method appends a node/key at the front of the linked list */
-	public void push(int data) {
+	public <T>void push(T data) {
 		var node = new Node(data);
 		node.next = head;
 		head = node;
@@ -77,7 +77,7 @@ public class MyLinkedList {
 	}
 
 	/* This method deletes a given node/key */
-	public void deleteSingle(int data) {
+	public <T> void deleteSingle(T data) {
 		if (head == null) {
 			System.out.println("Cannot delete!!! Empty Linkedlist");
 			System.out.println("===================");
@@ -102,7 +102,7 @@ public class MyLinkedList {
 	}
 
 	/* This method deletes a given node/key for all the occurrences */
-	public void deleteMultiple(int data) {
+	public <T> void deleteMultiple(T data) {
 		if (head == null) {
 			System.out.println("Cannot delete!!! Empty Linkedlist");
 			System.out.println("===================");

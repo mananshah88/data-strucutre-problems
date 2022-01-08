@@ -3,16 +3,17 @@ package _11_search_nth_index_last_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
+/* Search nth node from the end in linked list */
 public class SearchLastNthLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
 		linkedList.append(5);
-		linkedList.append(10);
+		linkedList.append("A");
 		linkedList.append(15);
-		linkedList.append(20);
+		linkedList.append("B");
 		linkedList.append(25);
-		linkedList.append(30);
+		linkedList.append("C");
 		linkedList.printList();
 
 		int search_index = 0;

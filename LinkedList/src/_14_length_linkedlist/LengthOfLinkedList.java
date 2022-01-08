@@ -3,16 +3,17 @@ package _14_length_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
+/* Calculate the size of the cyclic linked list */
 public class LengthOfLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
 		linkedList.append(5);
-		linkedList.append(10);
+		linkedList.append("A");
 		linkedList.append(15);
-		linkedList.append(20);
+		linkedList.append("B");
 		linkedList.append(25);
-		linkedList.append(30);
+		linkedList.append("C");
 
 		linkedList.head.next.next.next.next.next.next = linkedList.head.next;
 

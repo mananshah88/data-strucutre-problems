@@ -3,14 +3,15 @@ package _13_detect_loop_linkedlist;
 import base.MyLinkedList;
 import base.Node;
 
+/* Check whether linked list has cycle or not?*/
 public class DetectLoopLinkedList {
 
 	public static void main(String[] args) {
 		var linkedList = new MyLinkedList();
 		linkedList.append(5);
-		linkedList.append(10);
+		linkedList.append("A");
 		linkedList.append(15);
-		linkedList.append(20);
+		linkedList.append("B");
 		linkedList.append(25);
 		linkedList.head.next.next.next.next.next = linkedList.head.next.next;
 		//linkedList.printList();

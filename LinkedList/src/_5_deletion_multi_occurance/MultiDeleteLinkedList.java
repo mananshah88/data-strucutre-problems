@@ -2,6 +2,7 @@ package _5_deletion_multi_occurance;
 
 import base.MyLinkedList;
 
+/* Delete the matched node (multiple times if present) */
 public class MultiDeleteLinkedList {
 
 	public static void main(String[] args) {
